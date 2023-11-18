@@ -45,6 +45,9 @@
 
         <h1 class="title">Signup Form</h1>
         <SignupForm />
+
+        <h1 class="title">WatchEffect vs Watch</h1>
+        <WatchEffect />
     </div>
 </template>
 
@@ -60,6 +63,7 @@ import PropsPassing from '../PropsPassing.vue'
 import ModalEvent from '../ModalEvent.vue'
 import SlotChildren from '../SlotChildren.vue'
 import SignupForm from '../SignupForm.vue'
+import WatchEffect from '../WatchEffect.vue'
 
 export default {
     name: 'LandingView',
@@ -76,6 +80,7 @@ export default {
         ModalEvent,
         SlotChildren,
         SignupForm,
+        WatchEffect,
     },
     data() {
         return {

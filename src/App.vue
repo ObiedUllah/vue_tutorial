@@ -30,7 +30,7 @@ export default {
     components: {},
     methods: {
         redirect() {
-            this.$router.push({ name: 'HomeView' })
+            this.$router.push({ name: 'LandingView' })
         },
         back() {
             this.$router.go(-1)
