@@ -7,6 +7,9 @@
             <router-link :to="{ name: 'AboutView' }">About</router-link>
             <router-link :to="{ name: 'HomeView' }">home</router-link>
             <router-link :to="{ name: 'JobsView' }">Jobs</router-link>
+            <router-link :to="{ name: 'ContextExampleView' }"
+                >Context</router-link
+            >
         </div>
 
         <button @click="redirect">Redirect</button>
@@ -18,6 +21,7 @@
 </template>
 
 <script>
+import { provide, ref } from 'vue'
 // import HelloWorld from './components/HelloWorld.vue'
 import './assets/global.css'
 
@@ -26,7 +30,7 @@ export default {
     components: {},
     methods: {
         redirect() {
-            this.$router.push({ name: 'Home' })
+            this.$router.push({ name: 'HomeView' })
         },
         back() {
             this.$router.go(-1)
@@ -34,6 +38,18 @@ export default {
         forward() {
             this.$router.go(1)
         },
+    },
+    //provide/inject
+    setup() {
+        // Creating a reactive reference
+        const sharedData = ref('Hello from ParentComponent')
+
+        // Providing the shared data to be accessed by child components
+        provide('sharedData', sharedData)
+
+        return {
+            // Other properties or methods can be returned as needed
+        }
     },
 }
 </script>

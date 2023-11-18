@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 import About from '../pages/AboutView.vue'
+import ContextExampleViewVue from '../pages/ContextExampleView.vue'
 import Home from '../pages/HomeView.vue'
 import JobDetails from '../pages/JobDetailsView.vue'
 import Jobs from '../pages/JobsView.vue'
@@ -32,6 +33,11 @@ const routes = [
         name: 'JobDetailsView',
         component: JobDetails,
         props: true,
+    },
+    {
+        path: '/context',
+        name: 'ContextExampleView',
+        component: ContextExampleViewVue,
     },
 ]
 
