@@ -36,11 +36,16 @@ export default {
         }
     },
 
-    mounted() {
-        fetch('https://anime-enma.vercel.app/api/promos')
-            .then((res) => res.json())
-            .then((data) => (this.promos = data.data.promos))
-            .catch((err) => console.log(err.message))
+    async mounted() {
+        try {
+            const response = await fetch(
+                'https://anime-enma.vercel.app/api/promos'
+            )
+            const data = await response.json()
+            this.promos = data.data.promos
+        } catch (err) {
+            console.error(err.message)
+        }
     },
 }
 </script>

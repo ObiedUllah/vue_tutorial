@@ -48,6 +48,9 @@
 
         <h1 class="title">WatchEffect vs Watch</h1>
         <WatchEffect />
+
+        <h1 class="title">SCSS Styling</h1>
+        <ScssStyling />
     </div>
 </template>
 
@@ -64,6 +67,7 @@ import ModalEvent from '../ModalEvent.vue'
 import SlotChildren from '../SlotChildren.vue'
 import SignupForm from '../SignupForm.vue'
 import WatchEffect from '../WatchEffect.vue'
+import ScssStyling from '../ScssStyling.vue'
 
 export default {
     name: 'LandingView',
@@ -81,6 +85,7 @@ export default {
         SlotChildren,
         SignupForm,
         WatchEffect,
+        ScssStyling,
     },
     data() {
         return {

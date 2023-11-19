@@ -31,7 +31,6 @@ export default {
     setup() {
         const watchedValue = ref('')
         const anotherValue = ref('')
-
         const watchEffectValue = ref('')
 
         // Watcher using the watch function
